@@ -1,0 +1,8 @@
+datadir*
+out
+*.m~
+*.asv
+*.pdf
+py/*
+!py/convert_matfile.py
+
