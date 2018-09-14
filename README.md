@@ -1,4 +1,5 @@
 # Plotting cell death data
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1418463.svg)](https://doi.org/10.5281/zenodo.1418463)
 
 This repository contains the Matlab code for plotting cell death data.
 
