@@ -68,14 +68,16 @@ if hasFileInfo
 	out_dir = inS.out_dir;
 
 else
-	useDefault = questdlg(['Use the default input directories ' ...
-		'(datadir_raw and datadir_state) or define custom input directories?'], ...
-		'Define input directories', ...
-		'Default', 'Custom', 'Default');
-	
-	if strcmpi(useDefault, 'Custom')
-		raw_dir = uigetdir('', 'Raw measurement files');
-		state_dir = uigetdir('', 'State files');
+	if ~ischar(raw_dir) || isempty(raw_dir) || ~ischar(state_dir) || isempty(state_dir)
+		useDefault = questdlg(['Use the default input directories ' ...
+			'(datadir_raw and datadir_state) or define custom input directories?'], ...
+			'Define input directories', ...
+			'Default', 'Custom', 'Default');
+
+		if strcmpi(useDefault, 'Custom')
+			raw_dir = uigetdir('', 'Raw measurement files');
+			state_dir = uigetdir('', 'State files');
+		end
 	end
 
 	if ischar(raw_dir) && ~isempty(raw_dir) && ischar(state_dir) && ~isempty(state_dir)
