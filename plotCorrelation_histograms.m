@@ -55,6 +55,7 @@ markerData(end+1,:) = table("casp", "Caspase 3/7", [1 0.6 0], {struct});
 markerData(end+1,:) = table("psiva", "pSIVA-IANBD", [1 0 0], {struct});
 markerData(end+1,:) = table("pi", "Nucleus (PI)", [0.4 0 0], {struct});
 markerData(end+1,:) = table("toto", "Nucleus (toto)", [0.4 0 0], {struct});
+markerData(end+1,:) = table("cal520", "Calbryte 520", [0 0.5 0.8], {struct});
 
 n_bins = 40;					% Number of bins in histogram plots
 event_time_max = 30;			% Default maximum time bin [h]
